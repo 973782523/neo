@@ -1,0 +1,60 @@
+:root {
+  /* base for rem */
+  font-size: 10px;   
+}
+
+body {
+    margin: 0;
+    
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+    overflow: hidden;
+
+    background-color: #000;
+}
+
+h1 {
+	font-weight: lighter;
+	font-size: 130px;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+
+	padding: 20px 60px 30px;
+	border: 4px solid #fff;
+	border-radius: 20px;
+
+	animation: flicker 1.5s infinite;
+}
+
+h1:focus {
+	outline: none;
+}
+
+@keyframes flicker {   
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {    
+        text-shadow:
+            .2rem .2rem 1rem #fff,
+            0 0 2rem #f40,
+            0 0 4rem #f40,
+            0 0 6rem #f40,
+            0 0 8rem #f40,
+            0 0 10rem #f40;
+            
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem #08f,
+            inset 0 0 2rem #08f,
+            0 0 4rem #08f,
+            inset 0 0 4rem #08f;        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
